@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@400;500&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="app">
+      <label for="nums">Please, enter the number</label>
+      <input
+        type="number"
+        min="0"
+        max="1000000"
+        id="nums"
+        onkeydown="if(event.key==='.'){event.preventDefault();}"
+        oninput="event.target.value = event.target.value.replace(/[^0-9]*/g,'');"
+      />
+      <button type="button" id="convert">Convert</button>
+      <button type="button" id="reset">Reset</button>
+      <div id="word"></div>
+    </div>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>

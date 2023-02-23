@@ -1,0 +1,62 @@
+:root {
+  --accent: rgb(65, 13, 37);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  background: linear-gradient(snow, lightsteelblue) no-repeat left bottom;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+button {
+  border: 1px solid;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 3px 12px;
+  background: var(--accent);
+  color: snow;
+  font-family: Open Sans;
+  letter-spacing: 0.05rem;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 200%;
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0),
+    white,
+    rgba(255, 255, 255, 0)
+  );
+  opacity: 0;
+  transform: rotate(45deg);
+  left: 0;
+  top: -50%;
+  transition: all 1s ease-in;
+}
+
+button:hover::after {
+  left: 100%;
+  top: -20%;
+  opacity: 1;
+}
+
+#word {
+  font-style: italic;
+  margin-top: 5px;
+}
